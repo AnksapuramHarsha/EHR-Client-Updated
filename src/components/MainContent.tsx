@@ -458,15 +458,18 @@ const MainContent = () => {
                     <input type="checkbox" defaultChecked />
                     <div className="collapse-title text-sm font-medium text-neutral-700 border-b pb-1 relative">
                         <span className="arrow-indicator">&#9662;</span>Address
-                        <button
-                            type="button"
-                            onClick={() => addArrayEntry('addresses')}
-                            className="btn btn-primary absolute top-0 right-0 flex items-center gap-2"
-                        >
-                            <FaPlus /> Add Address
-                        </button>
+
                     </div>
-                    <div className="collapse-content">
+                    <div className="collapse-content relative">
+                        <div className="flex justify-end mb-4">
+                            <button
+                                type="button"
+                                onClick={() => addArrayEntry('addresses')}
+                                className="btn btn-primary absolute top-0 right-0 flex items-center gap-2"
+                            >
+                                <FaPlus /> Add Address
+                            </button>
+                        </div>
                         {form.addresses?.map((address, index) => (
                             <div key={index} className="mb-6 border border-gray-300 rounded-lg p-4 shadow-sm bg-white">
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -680,15 +683,17 @@ const MainContent = () => {
                     <input type="checkbox" defaultChecked />
                     <div className="collapse-title text-sm font-medium text-neutral-700 border-b pb-1 relative">
                         <span className="arrow-indicator">&#9662;</span>Relationships
-                        <button
-                            type="button"
-                            onClick={() => addArrayEntry('emergencyContacts')}
-                            className="btn btn-primary absolute top-0 right-0 flex items-center gap-2"
-                        >
-                            <FaPlus /> Add Emergency Contact
-                        </button>
                     </div>
-                    <div className="collapse-content">
+                    <div className="collapse-content relative">
+                        <div className="flex justify-end mb-4">
+                            <button
+                                type="button"
+                                onClick={() => addArrayEntry('emergencyContacts')}
+                                className="btn btn-primary absolute top-0 right-0 flex items-center gap-2"
+                            >
+                                <FaPlus /> Add Emergency Contact
+                            </button>
+                        </div>
                         {form.emergencyContacts?.map((contact, index) => (
                             <div key={index} className="mb-6 border border-gray-300 rounded-lg p-4 shadow-sm bg-white hover:shadow-lg transition-shadow duration-200">
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
