@@ -10,7 +10,7 @@ export const postConsultantSlotConfig = async (
 ): Promise<ConsultantSlotConfig> => {
   try {
     const response = await axios.post<ConsultantSlotConfig>(
-      `${API_URL}/${config.consultantId}/config`,
+      `${API_URL}/${config.consultantId}/slot-configs`,
       config,
       {
         headers: {
