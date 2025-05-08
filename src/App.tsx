@@ -10,12 +10,15 @@ import GenerateSlotsPage from './pages/GenerateSlotsPage';
 import AppointmentBookingPage from './pages/AppointmentBookingPage';
 import MasterDataPage from './pages/MasterDataPage';
 import AppointmentListPage from './pages/PatientListPage';
+import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path='/' element={<MainDashboard  />}/>
+        <Route path='/' element={<LoginPage  />}/>
+        <Route path="/register" element={<RegisterPage />} />
         <Route path='/dashboard' element={<MainDashboard />}/>
         <Route path="/health-records" element={<HealthRecordsPage />} />
         <Route path="/maincontent" element={<MainContent />} />
@@ -24,6 +27,7 @@ function App() {
         <Route path="/appointments/new" element={<AppointmentBookingPage />} />
         <Route path="/appointmentlist" element={<AppointmentListPage />} />
         <Route path="/masterdata" element={<MasterDataPage />} />
+        
 
 
       </Routes>
